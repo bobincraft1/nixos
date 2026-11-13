@@ -1,15 +1,19 @@
 {
-  description = "A very basic flake";
+  description = "My Nix Config";
 
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
   };
 
-  outputs = inputs: {
-    packages = builtins.mapAttrs (system: pkgs: {
-      hello = pkgs.hello;
+  outputs = { nixpkgs, ... } @ inputs:
 
-      default = inputs.self.packages.${system}.hello;
-    }) inputs.nixpkgs.legacyPackages;
+  let
+
+  in
+
+  {
+    #options go here.
+
+    
   };
 }
