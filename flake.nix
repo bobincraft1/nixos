@@ -29,7 +29,7 @@
       modules = [
        ./hosts/termux/home.nix
        ./modules/home-manager/shared.nix
-       ./modules/custom/noctalia.nix
+       #./modules/custom/noctalia.nix
       ];
      };
 
