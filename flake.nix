@@ -18,14 +18,14 @@
 
   let
    home-manager-config = home-manager.lib.homeManagerConfiguration;
-   android = nixpkgs.legacyPackages.aarch64-linux;
-   desktop = nixpkgs.legacyPackages.x86_64-linux;
+   arm64 = nixpkgs.legacyPackages.aarch64-linux;
+   x86_64 = nixpkgs.legacyPackages.x86_64-linux;
   in
 
   {
     homeConfigurations = {
      termux = home-manager-config {
-      pkgs = android;
+      pkgs = arm64;
       modules = [
        ./hosts/termux/home.nix
        ./modules/home-manager/shared.nix
@@ -34,7 +34,7 @@
      };
 
      laptop = home-manager-config {
-      pkgs = desktop;
+      pkgs = x86_64;
       modules = [
        ./modules/home-manager/shared.nix
        #laptop modules go here.
