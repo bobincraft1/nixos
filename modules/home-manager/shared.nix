@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
- #packages
+ #### PACKAGES ####
   home.packages = with pkgs; [
     hello                                                tree
   ];
 
-  #Programs
+  #### PROGRAMS ####
    programs = {
     home-manager = {
      enable = true;
@@ -21,6 +21,10 @@
     };
 
     bash = {
+     enable = true;
+    };
+
+    fish = {
      enable = true;
     };
 
