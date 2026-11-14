@@ -16,7 +16,16 @@
   in
 
   {
-    #options go here.
+    homeConfigurations = {
+     termux = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.aarch64-linux;
+      modules = [
+       ./hosts/termux/home.nix
+      ];
+     };
+
+     #more homeConfigs should start here.
+    };
 
     
   };
