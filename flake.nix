@@ -12,22 +12,29 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
 
   let
-
+   home-manager-config = home-manager.lib.homeManagerConfiguration;
+   android = nixpkgs.legacyPackages.aarch64-linux;
+   desktop = nixpkgs.legacyPackages.x86_64-linux;
   in
 
   {
     homeConfigurations = {
-     termux = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.aarch64-linux;
+     termux = home-manager-config {
+      pkgs = android;
       modules = [
        ./hosts/termux/home.nix
        ./modules/home-manager/shared.nix
       ];
      };
 
+     laptop = home-manager-config {
+      pkgs = desktop;
+      modules = [
+       ./modules/home-manager/shared.nix
+       #laptop modules go here.
+      ];
+     };  
      #more homeConfigs should start here.
     };
-
-    
   };
 }
