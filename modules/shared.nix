@@ -23,6 +23,14 @@
      enable = true;
     };
 
+    lazygit ={ 
+     enable = true;
+    };
+
+    gh = {
+     enable = true;
+    };
+
     # next program here
   };
 }
