@@ -4,9 +4,12 @@
   home.homeDirectory = "/root";
   home.stateVersion = "26.05";
   home.packages = with pkgs; [ 
-   tree
-   git
    hello
+   tree
   ];
+#Programs
+  programs.home-manager = { 
+   enable = true;
+ };
 }
 
