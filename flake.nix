@@ -21,6 +21,7 @@
       pkgs = nixpkgs.legacyPackages.aarch64-linux;
       modules = [
        ./hosts/termux/home.nix
+       ./modules/shared.nix
       ];
      };
 
