@@ -36,6 +36,7 @@
      laptop = home-manager-config {
       pkgs = x86_64;
       modules = [
+       ./hosts/laptop/configuration.nix
        ./modules/home-manager/shared.nix
        #laptop modules go here.
       ];
