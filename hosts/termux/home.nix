@@ -22,6 +22,10 @@
     presets = [ "gruvbox-rainbow" ];
    };
 
+   bash = {
+    enable = true;
+   };
+
   # next program here
  };
 }
