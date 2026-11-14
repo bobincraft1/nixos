@@ -8,8 +8,16 @@
    tree
   ];
 #Programs
-  programs.home-manager = { 
-   enable = true;
+  programs = {
+   home-manager = {
+    enable = true;
+   };
+
+   neovim = {
+    enable = true;
+   };
+
+  # next program here
  };
 }
 
