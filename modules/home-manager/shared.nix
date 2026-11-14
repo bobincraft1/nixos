@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
+ #packages
   home.packages = with pkgs; [
-    hello                                                         tree
+    hello                                                tree
   ];
 
   #Programs
