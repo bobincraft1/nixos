@@ -2,7 +2,8 @@
 {
  #### PACKAGES ####
   home.packages = with pkgs; [
-    hello                                             tree
+    tree
+    hello
   ];
 
   #### PROGRAMS ####
@@ -13,6 +14,10 @@
 
     neovim = {
       enable = true;
+      plugins = with pkgs.vimPlugins; [ 
+        telescope-nvim 
+        plenary-nvim 
+      ];
     };
 
     starship = {

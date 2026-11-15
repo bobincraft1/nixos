@@ -32,6 +32,7 @@
       modules = [
        ./hosts/termux/home.nix
        ./modules/home-manager/shared.nix
+       ./modules/custom/neovim.nix
       ];
      };
 
