@@ -2,38 +2,38 @@
 {
  #### PACKAGES ####
   home.packages = with pkgs; [
-    hello                                                tree
+    hello                                             tree
   ];
 
   #### PROGRAMS ####
    programs = {
     home-manager = {
-     enable = true;
+      enable = true;
     };
 
     neovim = {
-     enable = true;
+      enable = true;
     };
 
     starship = {
-     enable = true;
-     presets = [ "gruvbox-rainbow" ];
+      enable = true;
+      presets = [ "gruvbox-rainbow" ];
     };
 
     bash = {
-     enable = true;
+      enable = true;
     };
 
     fish = {
-     enable = true;
+      enable = true;
     };
 
     lazygit ={ 
-     enable = true;
+      enable = true;
     };
 
     gh = {
-     enable = true;
+      enable = true;
     };
 
     # next program here

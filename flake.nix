@@ -18,26 +18,32 @@
 
   let
    home-manager-config = home-manager.lib.homeManagerConfiguration;
-   arm64 = nixpkgs.legacyPackages.aarch64-linux;
-   x86_64 = nixpkgs.legacyPackages.x86_64-linux;
+   #arm64 = nixpkgs.legacyPackages.aarch64-linux;
+   #x86_64 = nixpkgs.legacyPackages.x86_64-linux;
   in
 
   {
     homeConfigurations = {
      termux = home-manager-config {
-      pkgs = arm64;
+      pkgs = import nixpkgs {
+        system = "aarch64-linux";
+	config.allowUnfree = true;
+      };
       modules = [
        ./hosts/termux/home.nix
        ./modules/home-manager/shared.nix
-       #./modules/custom/noctalia.nix
       ];
      };
 
      laptop = home-manager-config {
-      pkgs = x86_64;
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+	config.allowUnfree = true;
+      };
       modules = [
        ./hosts/laptop/configuration.nix
        ./modules/home-manager/shared.nix
+       #./modules/custom/noctalia.nix
        #laptop modules go here.
       ];
      };  
