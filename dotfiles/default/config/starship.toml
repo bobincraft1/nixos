@@ -1,0 +1,29 @@
+add_newline = true
+palette = 'gruvbox'
+
+format = '''
+[┌─\(](gb_gray)[localhost @termux](gb_aqua)[\)-\[](gb_gray)$directory[\]](gb_gray) $cmd_duration
+[└─](gb_gray)$character'''
+
+[palettes.gruvbox]
+gb_gray = '#928374'
+gb_red = '#fb4934'
+gb_green = '#b8bb26'
+gb_yellow = '#fabd2f'
+gb_blue = '#83a598'
+gb_aqua = '#8ec07c'
+gb_orange = '#fe8019'
+
+[directory]
+format = '[$path]($style)'
+style = 'bold gb_yellow'
+truncation_length = 3
+
+[cmd_duration]
+min_time = 2000
+format = 'took [$duration]($style)'
+style = 'bold gb_orange'
+
+[character]
+success_symbol = '[\$](bold gb_green)'
+error_symbol = '[\$](bold gb_red)'
