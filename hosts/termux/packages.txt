@@ -1,0 +1,7 @@
+fish
+starship
+zoxide
+fzf
+git
+gh
+stow
